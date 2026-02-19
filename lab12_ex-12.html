@@ -1,0 +1,149 @@
+<html>
+<head>
+<title>Control Structure</title>
+<script language="JavaScript">
+var a=8;
+document.write("If:- <br>");
+if(a%2==0)
+document.write("number is even"+"<br><br>");
+
+document.write("If else:- <br>");
+var a=3,b=4;
+if(a>b)
+document.write("a is greater<br><br>");
+else
+document.write("b is greater<br><br>"); 
+
+document.write("Nested if:- <br>");
+var y=2018;
+if(y%100!=0)
+if(y%4==0)
+document.write("leap year");
+else
+document.write("not a leap year <br>");
+if(y%400==0)
+document.write("leap year");
+
+var a=45,b=23,c=90;
+if(a>b)
+if(a>c)
+document.write("a is greatest<br><br>");
+else
+document.write("c is greatest<br><br>");
+else
+if(b>c)
+document.write("b is greatest<br><br>");
+else
+document.write("c is greatest<br><br>");
+
+document.write("Ladder else if:- <br>");
+var n=5;
+if(n%2==0&&n>0)
+document.write("number is even and positive<br>");
+else if(n%2!=0&&n<0)
+document.write("number is odd and negative<br>");
+else if(n%2==0&&n<0)
+document.write("number is even and negative<br>");
+else if(n%2!=0&&n>0)
+document.write("number is odd and positive<br>");
+else
+document.write("special number<br>"); 
+
+var a=5,b=90,c=67;
+if(a>b&&a>c)
+document.write("a is greatest <br>");
+else if(b>a&&b>c)
+document.write("b is greatest <br>");
+else
+document.write("c is greatest <br>"); 
+
+var hr=17,amt;
+if(hr>=1&&hr<=8)
+amt=100;
+else if(hr>=9&&hr<=12)
+amt=100+(hr-8)*20;
+else if(hr>=13&&hr<=16)
+amt=180+(hr-12)*40;
+else if(hr>=17&&hr<=20)
+amt=340+(hr-16)*60;
+else if(hr>=21&&hr<=24)
+amt=580+(hr-20)*80;
+document.write("amount incurred by the worker="+amt+"<br><br>");
+
+document.write("Switch-case statement:- <br>");
+var day=1,ch="u";
+switch(day)
+{
+case 1:
+document.write("the day is sunday");
+break;
+case 2:
+document.write("the day is monday");
+break;
+case 3:
+document.write("the day is tuesday");
+break;
+case 4:
+document.write("the day is wednesday");
+break;
+case 5:
+document.write("the day is thursday");
+break;
+case 6:
+document.write("the day is friday"); 
+break;
+case 7:
+document.write("the day is saturday");
+break;
+default:
+document.write("wrong choice");
+} 
+
+document.write("<br>");
+switch(ch)
+{
+case 'a':
+case 'e':
+case 'i':
+case 'o':
+case 'u':
+case 'A':
+case 'E':
+case 'I':
+case 'O':
+case 'U':
+document.write("it is a vowel");
+break;
+default:
+document.write("it is consonant");
+} 
+
+document.write("<br>");
+var a=10,b=2,c;
+var choice="*";
+switch(choice)
+{
+case '+’':
+c=a+b;
+break;
+case '-':
+c=a-b;
+break;
+case '*':
+c=a*b;
+break;
+case '/':
+c=a/b;
+break;
+case '%':
+c=a%b;
+break;
+default:
+document.write("wrong choice");
+}
+document.write("calculated value:"+c); 
+</script>
+</head>
+<body bgcolor="cyan" text="red">
+</body>
+</html>
