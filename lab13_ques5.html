@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Second largest</title>
+</head>
+<h1>Write a program to find the second largest element of an array.</h1>
+<script language="JavaScript">
+    var arr=new Array(9,18,7,5);
+    var i;
+var lar=arr[0];
+var sec_lar=-Infinity;
+for(i=1;i<4;i++)
+{
+    if(lar<arr[i])
+    {
+      sec_lar=lar;
+      lar=arr[i];
+    }
+    else if(arr[i]>sec_lar && arr[i] != lar)
+    {
+      sec_lar=arr[i];
+    }
+}
+document.write("Largest:"+lar+"<br>");
+document.write("Second Largest:"+sec_lar+"<br>");
+</script>
+<body>
+    
+</body>
+</html>

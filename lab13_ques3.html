@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>Reverse of a number</title>
+</head>
+<h2>Write a program to find reverse of number and check if palindrome or not.</h2>
+<script language="JavaScript">
+    var a=123;
+    var temp=a;
+    var rev=0;
+    var rem;
+    while(a>0)
+    {
+       rem=a%10;
+       rev=rev*10+rem;
+       a=Math.floor(a/10);
+    }
+    document.write("Reverse of a number:"+rev+"<br>")
+    if(temp==rev)
+    {
+      document.write("Palindrome");
+    }
+    else{
+        document.write("Not palindrome");
+    }
+</script>
+<body>
+    
+</body>
+</html>
