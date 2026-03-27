@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question.2</title>
+    <script>
+        function toggle(){
+            var x=document.getElementById("bt1");
+            var p=document.getElementById("para");
+            if(p.style.display=="none")
+        {
+            p.style.display="block";
+            x.innerHTML="Hide";
+        }
+        else{
+            p.style.display="none";
+            x.innerHTML="Show";
+        }
+        }
+    </script>
+</head>
+<body>
+    <p id="para">This is Sneha.I am practicing DOM.</p>
+        <button id="bt1" onclick="toggle()">Hide</button>
+</body>
+</html>

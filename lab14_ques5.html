@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question.5(form)</title>
+    <script>
+        function prime(){
+            var x=document.getElementById("num");
+            var n=parseInt(x.value);
+            if(n==1){
+                alert("neither prime nor composite");
+                return ;
+            }
+            for(var i=2;i<=Math.sqrt(n);i+=1){
+                if(n%i==0){
+                    alert(n+" is composite");
+
+                    return;
+                }
+            }
+            alert(n+" is prime");
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="prime(); return false;">
+        <input type="number" id="num" placeholder="Enter a number">
+        <button type="submit">Check</button>
+    </form>
+
+</body>
+</html>

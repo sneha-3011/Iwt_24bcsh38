@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM ASSIGNMENT</title>
+    <script lang="JavaScript">
+        function color(selectElement)
+        {
+           var selectedColor = selectElement.value;
+            var parentDiv = selectElement.parentElement;
+
+            // Change the background of the current div
+            parentDiv.style.backgroundColor = selectedColor;
+
+            // Prevent duplicate colors in other boxes
+            var allSelects = document.querySelectorAll("select");
+            allSelects.forEach(function(sel) {
+                if (sel !== selectElement && sel.value === selectedColor) {
+                    // Reset the other select back to default (no duplicate allowed)
+                    sel.value = "";
+                    sel.parentElement.style.backgroundColor = ""; 
+                    alert("This color is already chosen! Pick another.");
+                }
+            });
+
+
+        }
+    </script>
+</head>
+<body>
+    <div class="box1" style="height:100px;width:100px;border:2px solid black;" >
+        <select onchange="color(this)">
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+            <option value="yellow">Yellow</option>
+        </select>
+    </div>
+
+    <br><br>
+
+    <div class="box2" style="height:100px;width:100px;border:2px solid black;" onchange="color()">
+        <select onchange="color(this)">
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+            <option value="yellow">Yellow</option>
+        </select>
+    </div>
+
+    <br><br>
+
+    <div class="box3" style="height:100px;width:100px;border:2px solid black;" onchange="color()">
+        <select onchange="color(this)">
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+            <option value="yellow">Yellow</option>
+        </select>
+    </div>
+    
+</body>
+</html>
